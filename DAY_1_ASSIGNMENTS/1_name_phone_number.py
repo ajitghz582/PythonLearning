@@ -1,10 +1,10 @@
 
-
 student_phoneNumber_name = {1: 'a', 3: 'c', 2: 'b'}
 
 def Handler() :
 	while (1) :
-		choice = input("Enter :\t 1 - to search student name \n \t 2 - to insert new student record \n \t 0 - to quit\n")
+		choice = eval(input("Enter :\t 1 - to search student name \n \t 2 - to insert new student record \n \t 0 - to quit\n"))
+		print(choice)
 		if (choice == 1) :
 			if (student_phoneNumber_name) :
 				phone_number = input("Enter student's phone number : ")
@@ -21,7 +21,8 @@ def Handler() :
 			InsertRecord(phone_number, name)
 		elif (choice == 0) :
 			break
-		
+		else:
+			print("Enter correct choice")
 		
 
 def InsertRecord(x, y):
